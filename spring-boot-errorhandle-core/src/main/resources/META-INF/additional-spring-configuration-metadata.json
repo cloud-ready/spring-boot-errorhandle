@@ -1,0 +1,67 @@
+{
+  "groups": [
+  ],
+  "properties": [
+    {
+      "name": "server.error.controller.enabled",
+      "type": "java.lang.Boolean",
+      "defaultValue": "true"
+    },
+    {
+      "name": "server.error.handler.enabled",
+      "type": "java.lang.Boolean",
+      "defaultValue": "false"
+    },
+    {
+      "name": "server.error.include-stacktrace",
+      "type": "org.springframework.boot.autoconfigure.web.ErrorProperties.IncludeStacktrace",
+      "defaultValue": "NEVER"
+    },
+    {
+      "name": "server.error.message.search-strategy",
+      "type": "top.infra.errorhandle.SearchStrategy",
+      "defaultValue": "HIERARCHY_FIRST"
+    }
+  ],
+  "hints": [
+    {
+      "name": "server.error.controller.enabled",
+      "values": [
+        {
+          "value": "true",
+          "description": "Enables configuration of error controller."
+        },
+        {
+          "value": "false",
+          "description": "Disabled configuration of error controller."
+        }
+      ]
+    },
+    {
+      "name": "server.error.handler.enabled",
+      "values": [
+        {
+          "value": "true",
+          "description": "Enables configuration of exception handler."
+        },
+        {
+          "value": "false",
+          "description": "Disabled configuration of exception handler."
+        }
+      ]
+    },
+    {
+      "name": "server.error.message.search-strategy",
+      "values": [
+        {
+          "value": "HIERARCHY_FIRST",
+          "description": "Error message that has the closest type hierarchy distance will be used."
+        },
+        {
+          "value": "ORDER_FIRST",
+          "description": "First found error message will be used."
+        }
+      ]
+    }
+  ]
+}

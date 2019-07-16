@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+top.infra.boot.mvc.WebApplicationAutoConfiguration,\
+top.infra.errorhandle.ErrorhandleAutoConfiguration

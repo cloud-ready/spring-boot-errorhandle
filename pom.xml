@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <artifactId>spring-boot-errorhandle</artifactId>
+    <groupId>top.infra.cloud-ready.errorhandle</groupId>
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+    <parent>
+        <artifactId>cloud-ready-parent</artifactId>
+        <groupId>top.infra.cloud-ready</groupId>
+        <version>3.0.2</version>
+    </parent>
+    <version>3.0.0-SNAPSHOT</version>
+
+    <!-- @formatter:off -->
+    <dependencies>
+        <dependency><groupId>org.springframework.boot</groupId><artifactId>spring-boot-starter-undertow</artifactId><scope>test</scope></dependency>
+        <dependency><groupId>top.infra.cloud-ready</groupId><artifactId>spring-boot-test-support</artifactId><scope>test</scope></dependency>
+    </dependencies>
+    <!-- @formatter:on -->
+
+    <dependencyManagement>
+        <!-- @formatter:off -->
+        <dependencies>
+            <dependency>
+                <groupId>top.infra.cloud-ready.jackson</groupId>
+                <artifactId>spring-boot-jackson2</artifactId>
+                <version>${version.spring-boot-jackson2}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+            <dependency><groupId>top.infra.cloud-ready.errorhandle</groupId><artifactId>spring-boot-errorhandle-controller</artifactId><version>${project.version}</version></dependency>
+            <dependency><groupId>top.infra.cloud-ready.errorhandle</groupId><artifactId>spring-boot-errorhandle-core</artifactId><version>${project.version}</version></dependency>
+            <dependency><groupId>top.infra.cloud-ready.errorhandle</groupId><artifactId>spring-boot-errorhandle-feign</artifactId><version>${project.version}</version></dependency>
+            <dependency><groupId>top.infra.cloud-ready.errorhandle</groupId><artifactId>spring-boot-errorhandle-handler</artifactId><version>${project.version}</version></dependency>
+            <dependency><groupId>top.infra.cloud-ready.errorhandle</groupId><artifactId>spring-boot-errorhandle-message</artifactId><version>${project.version}</version></dependency>
+            <dependency><groupId>top.infra.cloud-ready.errorhandle</groupId><artifactId>spring-boot-errorhandle-resolver</artifactId><version>${project.version}</version></dependency>
+            <dependency><groupId>top.infra.cloud-ready.errorhandle</groupId><artifactId>spring-boot-errorhandle-xml</artifactId><version>${project.version}</version></dependency>
+            <dependency><groupId>top.infra.cloud-ready.jackson</groupId><artifactId>spring-boot-jackson2</artifactId><version>${project.version}</version></dependency>
+        </dependencies>
+        <!-- @formatter:on -->
+    </dependencyManagement>
+
+    <modules>
+        <module>spring-boot-errorhandle-controller</module>
+        <module>spring-boot-errorhandle-core</module>
+        <module>spring-boot-errorhandle-feign</module>
+        <!--<module>spring-boot-errorhandle-handler</module>-->
+        <!--<module>spring-boot-errorhandle-message</module>-->
+        <!--<module>spring-boot-errorhandle-resolver</module>-->
+        <module>spring-boot-errorhandle-tests</module>
+        <!--<module>spring-boot-errorhandle-xml</module>-->
+    </modules>
+
+    <properties>
+        <version.spring-boot-jackson2>0.0.1-SNAPSHOT</version.spring-boot-jackson2>
+    </properties>
+</project>
